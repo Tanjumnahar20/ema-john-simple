@@ -1,0 +1,14 @@
+.order-container{
+    height: 940px;
+    background-color:  rgba(255, 153, 0, 0.30);
+    position: sticky;
+    top: 0;
+
+    
+}
+.order-info{
+    padding-left: 23px;
+}
+.order-container h3{
+    text-align: center;
+}

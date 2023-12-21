@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import './Shop.css';
 import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 
 const Shop = () => {
     const[products, setProduct]=useState([])
@@ -13,22 +14,34 @@ const Shop = () => {
         .then(data=>setProduct(data))
      },[])
 
+     const [cart,setCart] = useState([]);
+     const handleAddToCart=(product)=>{
+      const newCart = [...cart,product];
+      setCart(newCart);
+   }
+    
+
     return (
         <div className='container'>
             <div className='product-container'>
 
               {
                 products.map(product=>
-                <Product product={product} key={product.id}>
+                <Product 
+                product={product} 
+                 key={product.id}
+                 handleAddToCart ={handleAddToCart}
+
+                >
                          
                 </Product>)
               }
-
             </div>
+
             <div className='order-container'>
-                <h3>order summary</h3>
+               <Cart cart={cart}></Cart>
+             </div>
 
-            </div>
         </div>
     );
 };
