@@ -12,3 +12,9 @@
 .order-container h3{
     text-align: center;
 }
+.btn-delete-cart{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+}
