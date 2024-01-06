@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Review from '../ReviewItem/Review';
 import './Order.css'
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 const Order = () => {
     const savedCart = useLoaderData();
@@ -36,7 +38,14 @@ const Order = () => {
         <Cart
          cart={cart}
          handleDeleteCart={handleDeleteCart}
-         ></Cart>
+         >
+            <Link className='proceed-link' to='/checkout'>
+            <button className='btn-proceed'>Proceed checkout
+            <span><FontAwesomeIcon  icon={faCheckCircle} /></span>
+
+            </button>
+            </Link>
+         </Cart>
        </div>
        </div>
     );

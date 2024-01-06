@@ -9,6 +9,16 @@
     margin: 50px;
     gap: 45px;
 }
+.btn-proceed{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+    align-items: center;
+}
+.proceed-link{
+    text-decoration: none;
+}
 
 
 
