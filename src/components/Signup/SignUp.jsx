@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import './Login.css'
-
-const Login = () => {
+import './SignUp.css'
+const SignUp = () => {
     return (
         <div>
-            <h4>login here</h4>
+            
         </div>
     );
 };
 
-export default Login;
+export default SignUp;
